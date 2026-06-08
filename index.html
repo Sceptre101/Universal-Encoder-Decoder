@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Encoder/Decoder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Universal Encoder/Decoder</h2>
+    
+    <textarea id="inputText" placeholder="Paste your text or hash here..."></textarea>
+    
+    <div class="controls">
+      <select id="formatSelect">
+        <option value="base64">Base64</option>
+        <option value="binary">Binary</option>
+        <option value="hex">Hexadecimal</option>
+        <option value="url">URL Encoding</option>
+        <option value="rot13">ROT13</option>
+        <option value="ascii">ASCII Decimal</option>
+        <option value="unicode">Unicode Escapes</option>
+        <option value="morse">Morse Code</option>
+        <option value="base32">Base32 (RFC 4648)</option>
+        <option value="base58">Base58 (Bitcoin)</option>
+        <option value="shellcode">Shellcode (\x Hex)</option>
+        <option value="octal">Octal</option>
+        <option value="base64url">Base64URL (JWT)</option>
+      </select>
+      
+      <button id="btnEncode">Encode</button>
+      <button id="btnDecode">Decode</button>
+      <button id="btnAutoDetect" class="magic-btn">Auto-Detect & Decode</button>
+    </div>
+
+    <textarea id="outputText" readonly placeholder="Result will appear here..."></textarea>
+    
+    <div class="footer-controls">
+      <p id="detectionResult">Awaiting input...</p>
+      <button id="btnCopy">Copy Result</button>
+    </div>
+  </div>
+
+  <script src="encoders.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
